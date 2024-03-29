@@ -1,41 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
-    <title>复习一下</title>
     <meta charset="utf-8">
+    <title>就是玩</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background: #000;
+        }
+
+        canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1> Do you know :</h1>
-    <h1 align="center">我想找对象</h1>
+    <canvas id="pinkboard"></canvas>
 
-    <p>顺序见链表；链表结点的插入；逆置；不敢死队</p>
-    <p>猴子选大王</p>
-    <p>你想玩原神吗？</p>
-    <p>我知道你已经迫不及待了，快点击下面的图片，开启你的原神之旅吧！</p>
-    <hr color="green" size="15px" width="600px" align="left">
-    <a
-        href="https://ys.mihoyo.com/?utm_source=backup53&from_channel=backup53&msclkid=6b411abd65f217ecca487cbeb3c14fbd#/">
-        <img src="2.webp" width="300px" title="你要启动原神了吗？">
-    </a>
-    <hr color="green" size="15px" width="600px" align="left">
-    <a href="https://pintia.cn/problem-sets/1772787776002588672/exam/problems/1772787804595146758?type=7&page=0">
-        PTA-实验二-不敢死队问题
-    </a>
-    <br />
-    <em>我真服你了</em>
-    <br>
-    <i>你为什么对我这样</i>
-    <br>
-    <b>真搞不懂你想干什么</b>
-    <br>
-    <strong>难道我就只是一个工具吗</strong>
-    <br>
-    <span>大多数都是只有在问题的时候找我</span>
-    <br>
-    <del>我现在真的对你很失望、很失望</del>
+    <script>
+        /*
+         * Settings
+         */
+    </script>
+    <audio autoplay="autopaly" loop="loop" id="audios" preload="auto">
+        <source src="http://music.163.com/song/media/outer/url?id=526464145.mp3" />
+    </audio>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 600px;
+            height: 400px;
+            margin: 200px auto;
+            position: absolute;
+            left: 30%
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            transition: all 3s;
+            transform-style: preserve-3d;
+            animation: move 3s infinite linear alternate;
+        }
+
+        .box>div {
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            opacity: .9;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 1s;
+        }
+
+        .box img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .left {
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+
+        .right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .bottom {
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+
+        .after {
+            transform: translateZ(-100px);
+        }
+
+        .before {
+            transform: translateZ(100px);
+        }
+
+        .wrap .box:hover .left {
+            transform: rotateY(90deg) translateZ(-160px);
+        }
+
+        .wrap .box:hover .right {
+            transform: rotateY(90deg) translateZ(160px);
+        }
+
+        .wrap .box:hover .top {
+            transform: rotateX(90deg) translateZ(160px);
+        }
+
+        .wrap .box:hover .bottom {
+            transform: rotateX(90deg) translateZ(-160px);
+        }
+
+        .wrap .box:hover .after {
+            transform: translateZ(-160px);
+        }
+
+        .wrap .box:hover .before {
+            transform: translateZ(160px);
+        }
+
+        @keyframes move {
+            from {
+                transform: rotateX(20deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(13deg) rotateY(720deg);
+            }
+        }
+    </style>
+    </head>
+    <div class="wrap">
+        <div class="box">
+            <div class="left"><img src="zp1.jpg" alt=""></div>
+            <div class="right"><img src="zp2.jpg" alt=""></div>
+            <div class="top"><img src="zp3.jpg" alt=""></div>
+            <div class="bottom"><img src="zp4.jpg" alt=""></div>
+            <div class="after"><img src="zp5.jpg" alt=""></div>
+            <div class="before"><img src="zp6.jpg" alt=""></div>
+        </div>
+    </div>
+
 </body>
 
 </html>
